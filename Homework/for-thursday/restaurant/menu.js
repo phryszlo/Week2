@@ -9,7 +9,7 @@ MENU [Brunch, Lunch, Dinner,Desert, Beverages Entrees,Appetizers]
 const Menu = {
   brunch: {
     bananaPancakes: {
-      title: "",
+      title: "Banana Pancakes",
       description: "These banana pancakes are soft, well-spiced, and full of delicious banana flavor. Made with a blend of whole wheat pastry flour and oat flour, so they’re healthier than your average pancake, and they also happen to be vegan!",
       calories: 2500,
       hot: true,

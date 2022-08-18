@@ -27,10 +27,12 @@ body {
 
 
 .sidebar {
+  position: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding-left: 2em;
   grid-area: sidebar;
   /* border: solid green; */
   color: #661515;

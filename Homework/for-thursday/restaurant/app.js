@@ -61,14 +61,13 @@ const submenuContent = (submenu) => {
     let propsString = "";
     for (const [key, value] of Object.entries(props)) {
       console.log(`${key} : ${value}`)
-      propsString += `${key} : ${value}` 
+      propsString +=
+      `<p style='padding-left: 1em;'>` +
+      `${key} : ${value}` + '</p>'
     }
 
     content += propsString;
   }
-  // Object.keys(menu[submenu]).forEach((item) => {
-  //   content += item[0].length;
-  // });
 
   return content;
 }
