@@ -11,6 +11,10 @@ https://www.antonsnyc.com/
   font-family: "Didot_Italic";
   src: url(./fonts/Didot_Italic.ttf);
 }
+@font-face {
+  font-family: "Butler_Maybe";
+  src: url(./fonts/Butler_Maybe.woff2);
+}
 
 body {
   display: grid;
@@ -21,33 +25,67 @@ body {
 }
 
 
-.sidebar a {
-  display: block;
-  height: 4em;
-  font-family: 'Butler_Bold', serif;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.2em;
-}
+
 .sidebar {
   height: 100vh;
   display: flex;
   flex-direction: column;
   height: 100vh;
   grid-area: sidebar;
-  border: solid green;
+  /* border: solid green; */
+  color: #661515;
+  overflow-y: hidden;
 }
-.sidebar-title {
-  font-family: 'Butler_Bold';
-  font-style: italic;
-  font-size: 3em;
+
+.main-nav {
+  width: 80%;
+  align-self: center;
+}
+
+.sidebar a {
+  display: block;
+  /* height: 3.3em; */
+  font-family: 'Butler_Bold', serif;
+  letter-spacing: .2pc;
+  line-height: 1em;
+  text-decoration: none;
   text-align: center;
-  padding: 1em 0 2em 0;
+  font-size: 1.2em;
+  padding: 14px 6.5px;
+  color: #aa1515;
+  /* opacity: .7; */
+}
+
+.sidebar-title {
+  font-family: 'Didot_Italic', cursive;
+  font-style: italic;
+  font-size: 3.3em;
+  text-align: center;
+  padding: 1em 0 .6em 0;
+}
+
+.sidebar-address {
+  height: 6em;
+  width: 80%;
+  text-align: center;
+  line-height: 1.6em;
+  padding-top: .5em;
+  font-family: 'Didot_Italic', Georgia, 'Times New Roman', Times, serif;
+  font-style: italic; /* fallback in case Didot not avail.*/
+  opacity: .6;
+  align-self: center;
+  border-top: .5px solid black;
+  border-bottom: .5px solid black;
+  margin-bottom: 2em;
 }
 
 .main {
   grid-area: main;
-  padding: 1em;
+  padding: 2em;
   height: 100vh;
-  border: solid deeppink;
+  border-left: .2px solid black;
+}
+.main li {
+  font-family: 'Butler_Bold';
+  font-size: 1.4em;
 }

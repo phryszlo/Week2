@@ -48,5 +48,15 @@ const showMenu = () => {
   Object.keys(menu).forEach(subMenu => {
     const li = ul.appendChild(document.createElement('li'));
     main.appendChild(li);
+
+    li.innerHTML = `${subMenu} :  ${menu[subMenu]}`;
   });
+}
+
+const submenuContent = (submenu) => {
+  let content = "";
+  Object.keys(menu[submenu]).forEach((item) => {
+    content += item[0].length;
+  });
+  return content;
 }
