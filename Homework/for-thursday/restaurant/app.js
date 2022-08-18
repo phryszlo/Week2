@@ -45,18 +45,30 @@ const windowResize = () => {
 const showMenu = () => {
   const main = document.querySelector(".main");
   const ul = main.appendChild(document.createElement('ul'));
-  Object.keys(menu).forEach(subMenu => {
+  for (const [key, value] of Object.entries(menu)) {
     const li = ul.appendChild(document.createElement('li'));
     main.appendChild(li);
 
-    li.innerHTML = `${subMenu} :  ${menu[subMenu]}`;
-  });
+    li.innerHTML = `${key} :  ${submenuContent(value)}`;
+  }
 }
 
 const submenuContent = (submenu) => {
   let content = "";
-  Object.keys(menu[submenu]).forEach((item) => {
-    content += item[0].length;
-  });
+  console.log(submenu)
+  for (const [sub, props] of Object.entries(submenu)) {
+    console.log(`${sub} : ${props}`);
+    let propsString = "";
+    for (const [key, value] of Object.entries(props)) {
+      console.log(`${key} : ${value}`)
+      propsString += `${key} : ${value}` 
+    }
+
+    content += propsString;
+  }
+  // Object.keys(menu[submenu]).forEach((item) => {
+  //   content += item[0].length;
+  // });
+
   return content;
 }
