@@ -1,0 +1,53 @@
+
+/* fonts flagrantly pilfered from: 
+https://www.antonsnyc.com/ 
+(for training purposes only)*/
+
+@font-face {
+  font-family: "Butler_Bold";
+  src: url(./fonts/Butler_Bold.otf);
+}
+@font-face {
+  font-family: "Didot_Italic";
+  src: url(./fonts/Didot_Italic.ttf);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 275px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "sidebar main";
+  grid-gap: 12px;
+}
+
+
+.sidebar a {
+  display: block;
+  height: 4em;
+  font-family: 'Butler_Bold', serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2em;
+}
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  grid-area: sidebar;
+  border: solid green;
+}
+.sidebar-title {
+  font-family: 'Butler_Bold';
+  font-style: italic;
+  font-size: 3em;
+  text-align: center;
+  padding: 1em 0 2em 0;
+}
+
+.main {
+  grid-area: main;
+  padding: 1em;
+  height: 100vh;
+  border: solid deeppink;
+}
